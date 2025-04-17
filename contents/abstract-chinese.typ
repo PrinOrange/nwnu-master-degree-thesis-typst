@@ -2,6 +2,11 @@
 #import "../templates/paratext.typ": paratext-page
 #import "../components/format.typ": paragraph
 
+#let format-keywords(..keywords) = {
+  let formatted = keywords.pos().join("； ")
+  [#formatted]
+}
+
 #paratext-page(addInTOC: false, title: "摘要", numbering: "I")[
   #paragraph[
     摘要内容，用宋体小4号字，两端对齐，左缩进2个汉字符，行距为固定值20磅，段前空0磅，段后空0磅。论文摘要中不应出现图片、图表、表格或其他插图材料。论文关键词是为了文献标引工作从论文中选取出来用以表示全文主题内容信息的单词或术语，3-7个，用宋体小4号字，每个关键词之间用分号间隔，两端对齐。
@@ -23,7 +28,7 @@
     #box()[
       #h(2em)#text(font: "SimHei")[关键词：]
       #text(font: ("Times New Roman", "SimSun"))[
-        关键词1；关键词2；……；关键词5；关键词6
+        #format-keywords("关键词 1","关键词 2","关键词 3")
       ]
     ]
   ]

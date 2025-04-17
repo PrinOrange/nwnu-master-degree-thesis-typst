@@ -1,7 +1,7 @@
 #set page(numbering: none)
 
-#include "contents/cover/cn.typ"
-#include "contents/cover/en.typ"
+#include "contents/cover-chinese.typ"
+#include "contents/cover-english.typ"
 
 #include "contents/statements/originality.typ"
 #include "contents/statements/copyright.typ"
