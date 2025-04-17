@@ -1,4 +1,5 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
+#import "../lib/text.typ":spaced-title
 
 #set page(
   margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
@@ -6,7 +7,7 @@
     #align(center)[
       #box(stroke: (bottom: 0.5pt), width: 100%)[
         #text(font: "SimSun", baseline: -5pt)[
-          目#h(2em)录 \
+          #spaced-title("目录") \
         ]
       ]
     ]
@@ -49,7 +50,7 @@
 #outline(
   title: [
     #box(width: 100%)[
-      #align(center)[#text(font: "SimHei", size: zh(3))[目#h(1em)录]]
+      #align(center)[#text(font: "SimHei", size: zh(3))[#spaced-title("目录")] ]
     ]
   ],
   indent: auto,
