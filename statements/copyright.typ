@@ -6,6 +6,7 @@
     x: 3cm,
   ),
   binding: auto,
+  numbering: none,
 )
 
 #v(10em)

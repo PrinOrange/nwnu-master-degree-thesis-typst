@@ -11,6 +11,13 @@
       ]
     ]
   ],
+  footer: context [
+    #box(width: 100%)[
+      #align(center)[
+        #counter(page).display("I")
+      ]
+    ]
+  ],
 )
 
 #h(1em);

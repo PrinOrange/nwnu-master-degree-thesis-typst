@@ -6,8 +6,15 @@
     #align(center)[
       #box(stroke: (bottom: 0.5pt), width: 100%)[
         #text(font: "SimSun", baseline: -5pt)[
-          摘#h(2em)要 \
+          Abstract \
         ]
+      ]
+    ]
+  ],
+  footer: context [
+    #box(width: 100%)[
+      #align(center)[
+        #counter(page).display("I")
       ]
     ]
   ],

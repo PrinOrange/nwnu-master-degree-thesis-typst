@@ -1,11 +1,11 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
-
 #set page(
   margin: (
     y: 2.5cm,
     x: 3.17cm,
   ),
   binding: auto,
+  numbering: none
 )
 
 #v(1.5cm)
