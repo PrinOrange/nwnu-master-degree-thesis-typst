@@ -12,6 +12,7 @@
 #include "outline/outline.typ"
 
 #counter(page).update(1)
+#include "conclusion/conclusion.typ"
 #include "acknowledgements/acknowledgements.typ"
 #include "appendixes/appendix-A.typ"
 #include "biology/biology.typ"

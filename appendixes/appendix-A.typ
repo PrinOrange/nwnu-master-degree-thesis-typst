@@ -20,9 +20,9 @@
   ],
 )
 
-#text(font: ("Arial", "SimHei"), size: zh(3))[
-  #align(center)[
-    附#h(1em)录#h(1em)A
+#align(center)[
+  #text(font: ("Arial", "SimHei"), size: 13pt)[
+    == 附#h(1em)录#h(1em)A
   ]
 ]
 

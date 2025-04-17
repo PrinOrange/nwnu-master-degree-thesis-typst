@@ -20,9 +20,9 @@
   ],
 )
 
-#text(font: "SimHei", size: zh(3))[
-  #align(center)[
-    致#h(1em)谢
+#align(center)[
+  #text(font: "SimHei", size: 13pt)[
+    == 致#h(1em)谢
   ]
 ]
 
