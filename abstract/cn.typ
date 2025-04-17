@@ -20,8 +20,6 @@
   ],
 )
 
-#h(1em);
-
 #text(font: "SimHei", size: zh(3))[
   #align(center)[
     摘#h(1em)要
