@@ -1,6 +1,8 @@
 {
   "allowCompoundWords": true,
   "words": [
+    "elif",
+    "esac",
     "Typst",
     "zihao"
   ]
