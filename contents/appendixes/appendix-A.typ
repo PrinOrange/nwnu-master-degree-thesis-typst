@@ -2,7 +2,7 @@
 #import "../../templates/paratext.typ": paratext-page
 #import "../../components/format.typ": paragraph
 
-#paratext-page(title: "附录A", numbering: "1", headerText: "附录")[
+#paratext-page(title: "附录A", numbering: "1", header-text: "附录")[
   #paragraph[
     附录是与论文内容密切相关、但编入正文又影响整篇论文编排的条理和逻辑
     性的一些资料，如某些重要的数据表格、计算程序、统计表等，是论文主体的补充内容，可根据需要设置。

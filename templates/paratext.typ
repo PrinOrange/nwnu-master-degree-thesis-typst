@@ -1,7 +1,7 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title;
 
-#let paratext-page(content, title: str, addInTOC: true, numbering: str, headerText: none, enablePagebreak: true) = [
+#let paratext-page(content, title: str, in-toc: true, numbering: str, header-text: none, enable-pagebreak: true) = [
   // Page settings.
   #set page(
     margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
@@ -9,10 +9,10 @@
       #align(center)[
         #box(stroke: (bottom: 0.5pt), width: 100%)[
           #text(font: ("Times New Roman", "SimSun"), baseline: -5pt)[
-            #if headerText == none {
+            #if header-text == none {
               [#spaced-title(title)]
             } else {
-              [#spaced-title(headerText)]
+              [#spaced-title(header-text)]
             }
           ]
         ]
@@ -30,7 +30,7 @@
   // Title
   #align(center)[
     #text(font: ("Arial", "SimHei"), size: zh(3))[
-      #if addInTOC {
+      #if in-toc {
         [== #spaced-title(title)]
       } else {
         [#spaced-title(title)]
@@ -41,7 +41,7 @@
   #content
 
   // Pagebreak
-  #if enablePagebreak {
+  #if enable-pagebreak {
     [#pagebreak()]
   } else { [] }
 ]
