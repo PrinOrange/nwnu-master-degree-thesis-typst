@@ -50,12 +50,12 @@
   special-program: "",
 ))
 
-#include "contents/statement-originality.typ"
-#include "contents/statement-copyright.typ"
+#include "contents/statements/statement-originality.typ"
+#include "contents/statements/statement-copyright.typ"
 
 #counter(page).update(1)
-#include "contents/abstract-chinese.typ"
-#include "contents/abstract-english.typ"
+#include "contents/abstracts/abstract-chinese.typ"
+#include "contents/abstracts/abstract-english.typ"
 #include "contents/outline.typ"
 
 #counter(page).update(1)

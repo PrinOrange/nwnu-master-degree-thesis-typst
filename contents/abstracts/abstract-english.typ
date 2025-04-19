@@ -1,6 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
-#import "../templates/paratext.typ": paratext-page
-#import "../components/format.typ": paragraph
+#import "../../templates/paratext.typ": paratext-page
+#import "../../components/format.typ": paragraph
 
 #let format-keywords(..keywords) = {
   let formatted = keywords.pos().join("; ")

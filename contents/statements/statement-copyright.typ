@@ -1,6 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
-#import "../templates/statement.typ": statement-page
-#import "../components/format.typ": statement-paragraph
+#import "../../templates/statement.typ": statement-page
+#import "../../components/format.typ": statement-paragraph
 
 #statement-page(title: "西北师范大学学位论文版权使用授权书")[
   #statement-paragraph[
@@ -10,17 +10,17 @@
     （保密的学位论文在解密后适用本授权书）
   ]
   #v(5em)
-  #box()[
-    #h(20em)
-    #text(font: "SimSun", size: zh(4))[
-      学位论文作者签名:
-    ]
-    #v(1em)
-  ]
-  #box()[
-    #h(20em)
-    #text(font: "SimSun", size: zh(4))[
-      签字日期:~~~~~~年~~~~月~~~~日
+  #align(right)[
+    #box(width:30em)[
+      #text(font: "SimSun", size: zh(4))[
+        学位论文作者签名:#h(7em)
+      ]
+      #v(1em)
+    ] \
+    #box(width:30em)[
+      #text(font: "SimSun", size: zh(4))[
+        签字日期:#h(4em)年#h(2em)月#h(2em)日
+      ]
     ]
   ]
 ]
