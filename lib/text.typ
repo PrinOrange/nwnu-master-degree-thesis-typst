@@ -7,6 +7,18 @@
   }
 }
 
+#let spaced-text(text, size) = {
+  let chars = text.clusters()
+  let result = () 
+  for (i, char) in chars.enumerate() {
+    result.push(char)
+    if i < chars.len() - 1 {
+      result.push(h(size))
+    }
+  }
+  result.join()
+}
+
 #let to-string(it) = {
   if type(it) == str {
     it

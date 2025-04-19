@@ -9,6 +9,8 @@
   #show outline.entry.where(level: 5): none
   #show outline.entry.where(level: 6): none
   #show outline.entry.where(level: 7): none
+
+  // 只显示 2、3 级别的标题
   #show outline.entry.where(level: 2): it => {
     block(
       text(
@@ -32,7 +34,7 @@
 
   #outline(
     title: none,
-    indent: auto,
+    indent: 0em,
   )
 ]
 
