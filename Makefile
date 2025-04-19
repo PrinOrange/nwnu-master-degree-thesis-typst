@@ -4,6 +4,9 @@ FONT_DIR := ./assets/fonts
 TTF_FILES := $(wildcard $(FONT_DIR)/*.ttf)
 
 .PHONY: install-fonts
+.PHONY: compile
+.PHONY: watch
+.PHONY: ping
 
 install-fonts:
 	@echo "Detecting OS..."
@@ -42,3 +45,14 @@ install-fonts:
 		echo "Unsupported OS: $$OS"; \
 		exit 1; \
 	fi
+
+compile:
+	@echo "Compiling typst project"
+	typst compile main.typ
+
+watch:
+	@echo "Watching typst project"
+	typst watch main.typ
+
+ping:
+	@echo "Pong"

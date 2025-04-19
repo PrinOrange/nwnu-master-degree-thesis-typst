@@ -2,6 +2,7 @@
 #import "../lib/text.typ": spaced-title;
 
 #let paratext-page(content, title: str, addInTOC: true, numbering: str, headerText: none, enablePagebreak: true) = [
+  // Page settings.
   #set page(
     margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
     header: [
@@ -25,6 +26,8 @@
       ]
     ],
   )
+
+  // Title
   #align(center)[
     #text(font: ("Arial", "SimHei"), size: zh(3))[
       #if addInTOC {
@@ -36,6 +39,8 @@
   ]
   #v(1em);
   #content
+
+  // Pagebreak
   #if enablePagebreak {
     [#pagebreak()]
   } else { [] }
