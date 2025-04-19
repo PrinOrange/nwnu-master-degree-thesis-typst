@@ -1,5 +1,5 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
-#import "../../templates/statement.typ": statement-page
+#import "../../layouts/statement.typ": statement-page
 #import "../../components/format.typ": statement-paragraph
 
 #statement-page(title: "西北师范大学学位论文版权使用授权书")[

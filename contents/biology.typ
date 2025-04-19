@@ -1,6 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "@preview/pointless-size:0.1.1": zh, zihao
-#import "../templates/paratext.typ": paratext-page
+#import "../layouts/paratext.typ": paratext-page
 #import "../components/format.typ": paragraph
 
 #let intro-list(content, title: str) = [

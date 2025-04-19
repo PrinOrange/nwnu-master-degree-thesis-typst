@@ -1,6 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title
-#import "../templates/paratext.typ": paratext-page
+#import "../layouts/paratext.typ": paratext-page
 #import "../components/format.typ": paragraph
 
 #paratext-page(numbering: "I", header-text: "目录", in-toc: false, title: "目录")[

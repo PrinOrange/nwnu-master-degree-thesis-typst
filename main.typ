@@ -1,5 +1,5 @@
 #set page(numbering: none)
-#import "contents/cover.typ": cover-page
+#import "pages/cover.typ": cover-page
 
 #cover-page((
   // 论文标题名称
@@ -50,13 +50,13 @@
   special-program: "",
 ))
 
-#include "contents/statements/statement-originality.typ"
-#include "contents/statements/statement-copyright.typ"
+#include "pages/statements/statement-originality.typ"
+#include "pages/statements/statement-copyright.typ"
 
 #counter(page).update(1)
 #include "contents/abstracts/abstract-chinese.typ"
 #include "contents/abstracts/abstract-english.typ"
-#include "contents/outline.typ"
+#include "pages/outline.typ"
 
 #counter(page).update(1)
 #include "contents/conclusion.typ"

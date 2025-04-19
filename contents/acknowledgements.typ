@@ -1,5 +1,5 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
-#import "../templates/paratext.typ": paratext-page
+#import "../layouts/paratext.typ": paratext-page
 #import "../components/format.typ": paragraph
 
 #paratext-page(title: "致谢", numbering: "1")[
