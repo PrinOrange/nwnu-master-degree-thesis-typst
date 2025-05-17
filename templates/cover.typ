@@ -115,13 +115,13 @@
 
   #v(1cm)
 
-  #heading(level: 1)[
-    #text(font: ("Times New Roman", "KaiTi_GB2312"), size: zh(1))[
-      #align(center)[
-        #title
-      ]
+
+  #text(font: ("Times New Roman", "KaiTi_GB2312"), size: zh(1))[
+    #align(center)[
+      #title
     ]
   ]
+
 
   #v(1.0cm)
 

@@ -12,7 +12,7 @@
   #v(10em)
 
   #set heading(outlined: false)
-  #show heading.where(level: 2): it => [
+  #show heading.where(level: 1): it => [
     #text(font: "SimHei", size: zh(-2))[
       #align(center)[
         #set heading(outlined: false)

@@ -23,35 +23,41 @@
     ],
   )
 
-  #set par(leading: 10pt, justify: true, first-line-indent: (amount: 2em, all: true))
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
+  #set par(leading: 1em)
 
-  #show outline.entry.where(level: 1): none
   #show outline.entry.where(level: 4): none
   #show outline.entry.where(level: 5): none
   #show outline.entry.where(level: 6): none
   #show outline.entry.where(level: 7): none
 
-  // 只显示 2、3 级别的标题
-  #show outline.entry.where(level: 2): it => {
-    block(
-      text(
-        font: "SimHei",
+  #show outline.entry.where(level: 1): it => {
+    block[
+      #text(
+        font: ("Times New Roman", "SimHei"),
         size: zh(-4),
-        weight: "bold",
-        it,
-      ),
-    )
+      )[#it]
+    ]
   }
-  #show outline.entry.where(level: 3): it => {
-    block(
-      text(
-        font: "SimSun",
+
+  #show outline.entry.where(level: 2): it => {
+    block[
+      #text(
+        font: ("Times New Roman", "SimSun"),
         size: zh(5),
         weight: "regular",
-        it,
-      ),
-    )
+      )[#it]
+    ]
+  }
+
+  #show outline.entry.where(level: 3): it => {
+    block[
+      #text(
+        font: ("Times New Roman", "SimSun"),
+        size: zh(5),
+        weight: "regular",
+      )[#it]
+    ]
   }
 
   #outline(
@@ -63,6 +69,5 @@
       ]
       #v(1em)
     ],
-    indent: 0em,
   )
 ]

@@ -24,7 +24,7 @@
     ],
   )
   #set heading(outlined: false)
-  #show heading.where(level: 2): it => [
+  #show heading.where(level: 1): it => [
     #text(font: ("Arial", "SimHei"), size: zh(-2))[
       #align(center)[
         #spaced-title(it)

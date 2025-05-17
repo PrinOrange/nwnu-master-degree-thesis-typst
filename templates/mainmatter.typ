@@ -1,7 +1,7 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title;
 
-#let paratext-template(content) = [
+#let mainmatter-template(content) = [
   // Page settings.
   #set page(
     margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
@@ -23,11 +23,26 @@
     ],
   )
 
+  #set heading(numbering: "1.1.1")
   #show heading.where(level: 1): it => [
-    #text(font: ("arial", "SimHei"), size: zh(-2))[
+    #text(font: ("Times New Roman", "SimHei"), size: zh(-2), weight: "regular")[
       #align(center)[
-        #spaced-title(it.body)
+        #counter(heading).display("第 1 章") #h(1em) #spaced-title(it.body)
       ]
+    ]
+  ]
+
+  #show heading.where(level: 2): it => [
+    #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
+      #set par(leading: 10pt, justify: true, first-line-indent: 0em)
+      #counter(heading).display("1.1") #it.body
+    ]
+  ]
+
+  #show heading.where(level: 3): it => [
+    #text(font: ("arial", "SimHei"), size: zh(4), weight: "regular")[
+      #set par(leading: 10pt, justify: true, first-line-indent: 0em)
+      #counter(heading).display("1.1.1") #it.body
     ]
   ]
 
@@ -36,5 +51,6 @@
 
   #v(1em);
   #content
-  
+
+  #pagebreak();
 ]

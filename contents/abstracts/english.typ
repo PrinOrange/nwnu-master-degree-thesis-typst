@@ -5,7 +5,7 @@
   [#formatted]
 }
 
-== Abstract
+= Abstract
 
 The content of the abstract should be in Times New Roman, size 4, justified, with 2 characters indented to the left, and a fixed line spacing of 20 pounds. There should be no pictures, charts, tables or other illustrations in the abstract. The keywords of the paper are words or terms selected from the paper for the purpose of document indexing to represent the subject content of the full text, 3-7 words, in Times New Roman, size 4, with each keyword separated by a semicolon, justified.
 
