@@ -13,8 +13,7 @@
 #abstract-template(include "contents/abstracts/chinese.typ")
 #abstract-template(include "contents/abstracts/english.typ")
 
-#import "templates/outline.typ": outline-template
-#outline-template()
+#include "templates/outline.typ"
 
 #import "templates/mainmatter.typ": mainmatter-template
 #counter(page).update(1)

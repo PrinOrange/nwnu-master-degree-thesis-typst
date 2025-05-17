@@ -1,8 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title
 
-#let outline-template() = [
-
   #set page(
     margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
     header: [
@@ -61,6 +59,7 @@
   }
 
   #outline(
+    indent: 1em,
     title: align(center)[
       #box(width: 100%)[
         #text(font: "SimHei", weight: "bold")[
@@ -70,4 +69,3 @@
       #v(1em)
     ],
   )
-]

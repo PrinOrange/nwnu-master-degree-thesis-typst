@@ -23,27 +23,33 @@
     ],
   )
 
-  #set heading(numbering: "1.1.1")
+  #show heading.where(level: 1): set heading(numbering: "第 1 章")
+  #show heading.where(level: 2): set heading(numbering: "1.1")
+  #show heading.where(level: 3): set heading(numbering: "1.1.1")
+
   #show heading.where(level: 1): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(-2), weight: "regular")[
       #align(center)[
-        #counter(heading).display("第 1 章") #h(1em) #spaced-title(it.body)
+        #it
       ]
     ]
+    #v(1em)
   ]
 
   #show heading.where(level: 2): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
       #set par(leading: 10pt, justify: true, first-line-indent: 0em)
-      #counter(heading).display("1.1") #it.body
+      #it
     ]
+    #v(1em)
   ]
 
   #show heading.where(level: 3): it => [
-    #text(font: ("arial", "SimHei"), size: zh(4), weight: "regular")[
+    #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
       #set par(leading: 10pt, justify: true, first-line-indent: 0em)
-      #counter(heading).display("1.1.1") #it.body
+      #it
     ]
+    #v(1em)
   ]
 
   #set par(leading: 10pt, justify: true, first-line-indent: (amount: 2em, all: true))
