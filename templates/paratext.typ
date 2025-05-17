@@ -29,12 +29,13 @@
         #spaced-title(it.body)
       ]
     ]
+    #v(0.5em);
   ]
 
   #set par(leading: 10pt, justify: true, first-line-indent: (amount: 2em, all: true))
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
 
-  #v(1em);
+  #v(0.5em);
   #content
-  
+
 ]

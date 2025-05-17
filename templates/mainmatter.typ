@@ -23,6 +23,22 @@
     ],
   )
 
+  // #show raw: it => [
+  //   #set text(font: ("Consolas", "Microsoft YaHei"), size: 11pt)
+  //   #set line()
+  //   #if it.block [
+  //     #set text(size: 10pt)
+  //     #align(center)[
+  //       #box(
+  //         stroke: (paint: black, thickness: 1pt, dash: "solid"),
+  //         inset: 8pt,
+  //       )[#it]
+  //     ]
+  //   ] else [
+  //     #it
+  //   ]
+  // ]
+
   #show heading.where(level: 1): set heading(numbering: "第 1 章")
   #show heading.where(level: 2): set heading(numbering: "1.1")
   #show heading.where(level: 3): set heading(numbering: "1.1.1")
@@ -34,6 +50,7 @@
       ]
     ]
     #v(1em)
+    #counter(math.equation).update(0)
   ]
 
   #show heading.where(level: 2): it => [
