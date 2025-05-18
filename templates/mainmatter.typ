@@ -1,5 +1,5 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
-#import "../lib/text.typ": spaced-title;
+#import "/lib/text.typ": spaced-title;
 
 #let mainmatter-template(content) = [
   // Page settings.
@@ -13,6 +13,7 @@
           ]
         ]
       ]
+      #counter(footnote).update(0)
     ],
     footer: context [
       #box(width: 100%)[
@@ -23,6 +24,12 @@
     ],
   )
 
+
+  #show footnote: set footnote(numbering: "①")
+  #show footnote.entry: set text(size: zh(-5))
+  #show footnote.entry: set par(spacing: 0em, justify: true, leading: 1em)
+
+  #show figure.caption: set text(size: zh(5))
   #show figure.where(kind: table): set figure(
     supplement: "表",
     numbering: (..args) => {

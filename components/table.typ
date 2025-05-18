@@ -6,7 +6,7 @@
     kind: table,
   )[
     #show table.cell.where(y: 0): cell => {
-      set text(font: ("Times New Roman", "SimSun"), weight: "bold")
+      set text(font: ("Times New Roman", "SimSun"), weight: "regular")
       cell
     }
     #tablem.tablem()[#content]
@@ -20,7 +20,7 @@
   )[
     #show figure.where(kind: table): set figure.caption(position: top)
     #show table.cell.where(y: 0): cell => {
-      set text(font: ("Times New Roman", "SimSun"), weight: "bold")
+      set text(font: ("Times New Roman", "SimSun"), weight: "regular")
       cell
     }
     #tablem.three-line-table()[#content]
