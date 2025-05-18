@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-硕士研究生学位论文模板
+硕士学位论文
 </h1>
 
 > [!WARNING]
@@ -81,6 +81,10 @@ make compile
 + `conclusion.typ`: 结论内容。
 + `references/ref.bib`: 参考文献内容，这部分内容使用 BibTeX 编写。
 + `acknowledgement.typ`: 致谢内容。
+
+## 参考标准
+
+本项目参考西北师范大学的研究生学位论文 [撰写格式及印制规格的规定](https://glxy.nwnu.edu.cn/_upload/article/files/6d/87/e60340204267b297279da98ee812/2de72e0e-fe20-4af8-9c8f-ffc6ee839595.pdf) 编写。并参考了西北师范大学计算机科学与工程学院的 [论文 LaTeX 模板样例](https://jsj.nwnu.edu.cn/_upload/article/files/eb/c1/e3afc0a744c3a476a36ca4b6e892/5f4f9570-49bc-4012-9d54-4765603a1f5b.zip)
 
 ## 协议
 本 Typst 模板
