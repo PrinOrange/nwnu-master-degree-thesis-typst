@@ -39,6 +39,6 @@
   ))
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
 
-  #v(0.5em);
+  #v(1em);
   #content
 ]

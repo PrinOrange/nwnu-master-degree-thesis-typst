@@ -96,7 +96,7 @@
   #v(1.5cm)
 
   #align(center)[
-    #image("../assets/logo.png", width: 6.3cm, height: 1.03cm)
+    #image("/assets/logo.svg", width: 6.3cm, height: 1.03cm)
   ]
 
   #text(font: "simsun", size: zh(2))[

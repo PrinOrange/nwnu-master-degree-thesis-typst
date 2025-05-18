@@ -56,7 +56,7 @@ watch:
 	typst watch main.typ
 
 fmt:
-	@echo "Watching typst project"
+	@echo "Formatting project"
 	typstyle -i .
 
 ping:

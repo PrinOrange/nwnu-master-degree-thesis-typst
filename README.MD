@@ -1,4 +1,10 @@
-# 西北师范大学 硕士研究生学位论文模板
+<p align="center">
+  <img src="./assets/logo.svg" style="max-width: 300px;" />
+</p>
+
+<h1 align="center">
+硕士研究生学位论文模板
+</h1>
 
 > [!WARNING]
 > 本模板仍然在开发中，欢迎贡献本项目。
@@ -7,7 +13,9 @@
 [学习了解 Typst](https://typst.app/docs/) ，或者你可以参考
 [中文教程](https://typst-doc-cn.github.io/guide/) 。
 
-![](./assets/preview.png)
+<p align="center">
+  <img src="./assets/preview.png" style="max-width: 300px;border: 2px solid black;" />
+</p>
 
 ## 快速开始
 
