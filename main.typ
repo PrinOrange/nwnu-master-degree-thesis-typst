@@ -1,3 +1,6 @@
+#import "@preview/cuti:0.3.0": show-cn-fakebold
+#show: show-cn-fakebold
+
 #set page(numbering: none)
 #import "templates/cover.typ": cover-template
 #import "templates/statement.typ": statement-template
@@ -6,9 +9,15 @@
 #import "templates/paratext.typ": paratext-template
 #import "templates/references.typ": references-template
 #import "templates/appendix.typ": appendix-template
-
+#import "/states/header-state.typ": header-alternative-status, header-status;
 #import "contents/cover.typ": cover-content
 #cover-template(cover-content);
+
+#show heading.where(level: 1): it => {
+  header-status.update(it)
+  header-alternative-status.update(1)
+  it
+}
 
 #statement-template(include "contents/statements/originality.typ");
 #statement-template(include "contents/statements/copyright.typ");
@@ -19,7 +28,7 @@
 
 #include "templates/outline.typ"
 #counter(page).update(1)
-#counter(heading).update(1);
+#counter(heading).update(0);
 #mainmatter-template(include "contents/mainmatter/chapter-1/content.typ");
 #mainmatter-template(include "contents/mainmatter/chapter-2/content.typ");
 #mainmatter-template(include "contents/mainmatter/chapter-3/content.typ");

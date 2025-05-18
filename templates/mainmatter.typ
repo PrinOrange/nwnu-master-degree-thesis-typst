@@ -1,20 +1,25 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/lib/text.typ": spaced-title;
+#import "/components/reasoning.typ": *
+#import "@preview/cuti:0.3.0": show-cn-fakebold
+#import "/states/header-state.typ": header-alternative-status, header-status;
+#import "@preview/hydra:0.6.1": hydra
+#show: show-cn-fakebold
 
 #let mainmatter-template(content) = [
   // Page settings.
   #set page(
     margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
-    header: [
-      #align(center)[
+    header: context {
+      align(center)[
         #box(stroke: (bottom: 0.5pt), width: 100%)[
           #text(font: ("Times New Roman", "SimSun"), baseline: -5pt)[
-            #spaced-title("目录")
+            #hydra(1, use-last: true)
           ]
         ]
       ]
-      #counter(footnote).update(0)
-    ],
+      counter(footnote).update(0)
+    },
     footer: context [
       #box(width: 100%)[
         #align(center)[
@@ -68,14 +73,15 @@
   #show heading.where(level: 3): set heading(numbering: "1.1.1")
 
   #show heading.where(level: 1): it => [
+    #counter(math.equation).update(0)
+    #counter(figure).update(0)
+    #reset-reasoning-counter()
     #text(font: ("Times New Roman", "SimHei"), size: zh(-2), weight: "regular")[
       #align(center)[
         #it
+        #v(1em)
       ]
     ]
-    #v(1em)
-    #counter(math.equation).update(0)
-    #counter(figure).update(0)
   ]
   #show heading.where(level: 2): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
@@ -100,6 +106,5 @@
 
   #v(1em);
   #content
-
-  #pagebreak();
+  #pagebreak()
 ]
