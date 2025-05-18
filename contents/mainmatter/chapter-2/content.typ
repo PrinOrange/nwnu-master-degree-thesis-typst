@@ -56,19 +56,13 @@
 
 图序与图名置于图的下方，用宋体5号字，居中，段前空6磅，段后空12磅，单倍行距；图序与图名文字之间空一个字符。如“图2-1 发展中国家经济增长速度的比较（1960-2000）”，其中“图2.1”是图序。根据学科专业习惯可在中文图序和图名下方添加对应的英文图序和名，采用Times New Roman体，居中，段前空0磅，段后空12磅，单倍行距。
 
-#figure(
-  image("./figure-2-1.svg", width: 70%),
-  caption: [这是一张示例插图],
-)
+#figure(image("./figure-2-1.svg", width: 70%), caption: [这是一张示例插图])
 
 图中的术语、符号、单位等应与正文表述中所用一致，图中文字用5号或小5 号（9～10.5 磅）字，以能够清晰阅读为标准。专用名字代号、单位可采用外文表示，坐标轴题名、词组、描述性的词语均须采用中文。
 
 如果一个图由两个或两个以上分图组成时，各分图分别以(a)、(b)、(c)……作为图序，并须有分图名。
 
-#figure(
-  image("./figure-2-2.svg", width: 70%),
-  caption: [这是一另张示例插图],
-)
+#figure(image("./figure-2-2.svg", width: 70%), caption: [这是一另张示例插图])
 
 === 列表的说明
 
@@ -137,17 +131,19 @@
 
 比如，现在我想求出一元二次方程 $a x^2 + b x + c = 0, (a ≠ 0)$ 的求根公式，有以下演算过程：
 
-#formula($
-  a x^2 + b x + c = 0 ⇒ \
-  a x^2 + b x = -c ⇒ \
-  x^2 + frac(b, a)x = -frac(c, a) ⇒ \
-  x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
-  (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
-  (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
-  x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
-  x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-  x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-$)
+#formula(
+  $
+    a x^2 + b x + c = 0 ⇒ \
+    a x^2 + b x = -c ⇒ \
+    x^2 + frac(b, a)x = -frac(c, a) ⇒ \
+    x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
+    (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
+    (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
+    x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
+    x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+    x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+  $,
+)
 
 最终，我们就得到了如下对一元二次方程的求根公式：
 

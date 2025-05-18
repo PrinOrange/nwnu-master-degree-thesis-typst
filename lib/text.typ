@@ -11,7 +11,12 @@
         if body.has("text") {
           flat-text = body.text
         } else if body.has("children") {
-          flat-text = body.children.map(c => if type(c) == str { c } else if c.has("text") { c.text } else { "" }).join()
+          flat-text = body
+            .children
+            .map(c => if type(c) == str { c } else if c.has("text") {
+              c.text
+            } else { "" })
+            .join()
         } else {
           flat-text = str(body)
         }
@@ -25,7 +30,7 @@
       ""
     }
   }
-  
+
   let chars = text-str.clusters()
   if chars.len() == 2 {
     [#chars.at(0)#h(size)#chars.at(1)]
@@ -37,7 +42,7 @@
 
 #let spaced-text(text, size) = {
   let chars = text.clusters()
-  let result = () 
+  let result = ()
   for (i, char) in chars.enumerate() {
     result.push(char)
     if i < chars.len() - 1 {

@@ -31,10 +31,7 @@
 
 #show outline.entry.where(level: 1): it => {
   block[
-    #text(
-      font: ("Times New Roman", "SimHei"),
-      size: zh(-4),
-    )[#it]
+    #text(font: ("Times New Roman", "SimHei"), size: zh(-4))[#it]
   ]
 }
 
@@ -58,14 +55,11 @@
   ]
 }
 
-#outline(
-  indent: 1em,
-  title: align(center)[
-    #box(width: 100%)[
-      #text(font: "SimHei", weight: "bold")[
-        #spaced-title("目录")
-      ]
+#outline(indent: 1em, title: align(center)[
+  #box(width: 100%)[
+    #text(font: "SimHei", weight: "bold")[
+      #spaced-title("目录")
     ]
-    #v(1em)
-  ],
-)
+  ]
+  #v(1em)
+])

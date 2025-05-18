@@ -1,4 +1,4 @@
 
-#let axiom(title,content) = [
+#let axiom(title, content) = [
   #content
 ]

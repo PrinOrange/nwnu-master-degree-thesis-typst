@@ -1,7 +1,7 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/lib/text.typ": spaced-title;
 
-#let mainmatter-template(content) = [
+#let appendix-template(content) = [
   // Page settings.
   #set page(
     margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
@@ -63,7 +63,7 @@
     numbering("1-1", chapter, codeblock-counter)
   })
 
-  #show heading.where(level: 1): set heading(numbering: "第 1 章")
+  #show heading.where(level: 1): set heading(numbering: "附录 A")
   #show heading.where(level: 2): set heading(numbering: "1.1")
   #show heading.where(level: 3): set heading(numbering: "1.1.1")
 

@@ -7,11 +7,7 @@
       #title
     ]
   ]
-  #set enum(
-    numbering: "[1]",
-    indent: 1em,
-    body-indent: 0.5em,
-  )
+  #set enum(numbering: "[1]", indent: 1em, body-indent: 0.5em)
   #set par(justify: true, leading: 1em)
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
   #content

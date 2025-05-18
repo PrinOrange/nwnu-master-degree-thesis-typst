@@ -7,7 +7,7 @@
 #let get-current-heading(level: 2) = {
   let headings = query(
     selector(heading.where(level: level)).before(here()),
-    here()
+    here(),
   )
   if headings.len() > 0 {
     headings.last().body // 返回最近的二级标题内容

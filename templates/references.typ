@@ -1,7 +1,7 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title;
 
-#let paratext-template(content) = [
+#let references-template(content) = [
   // Page settings.
   #set page(
     margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
@@ -40,5 +40,4 @@
 
   #v(0.5em);
   #content
-
 ]

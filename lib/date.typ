@@ -13,7 +13,7 @@
     "9": "九",
     "10": "十",
     "11": "十一",
-    "12": "十二"
+    "12": "十二",
   )
   zh-digits.at(str(num), default: "无效数字")
 }
@@ -51,7 +51,10 @@
 
   // 转换年份为中文
   let year-str = str(year-int)
-  let year-zh = year-str.clusters().map(digit => number-to-zh(int(digit))).join()
+  let year-zh = year-str
+    .clusters()
+    .map(digit => number-to-zh(int(digit)))
+    .join()
   let month-zh = number-to-zh(month-int)
 
   [#year-zh\年#month-zh\月]
@@ -71,7 +74,7 @@
     "9": "September",
     "10": "October",
     "11": "November",
-    "12": "December"
+    "12": "December",
   )
   // 类型检查和转换
   let year-int = if type(year) == int {

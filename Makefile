@@ -5,6 +5,7 @@ TTF_FILES := $(wildcard $(FONT_DIR)/*.ttf)
 
 .PHONY: install-fonts
 .PHONY: compile
+.PHONY: fmt
 .PHONY: watch
 .PHONY: ping
 
@@ -53,6 +54,10 @@ compile:
 watch:
 	@echo "Watching typst project"
 	typst watch main.typ
+
+fmt:
+	@echo "Watching typst project"
+	typstyle -i .
 
 ping:
 	@echo "Pong"

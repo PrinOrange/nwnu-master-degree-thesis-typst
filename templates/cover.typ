@@ -1,6 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-text
-#import "../lib/date.typ": format-date-zh, format-date-en
+#import "../lib/date.typ": format-date-en, format-date-zh
 
 #let cover-template(
   (
