@@ -24,6 +24,8 @@
     ],
   )
 
+  #show enum: set enum(indent: 2em)
+  #show list: set list(indent: 2em)
 
   #show footnote: set footnote(numbering: "①")
   #show footnote.entry: set text(size: zh(-5))
