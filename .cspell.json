@@ -1,12 +1,15 @@
 {
   "allowCompoundWords": true,
   "words": [
+    "bgcolor",
     "choco",
+    "Consolas",
     "elif",
     "esac",
+    "hlcolor",
     "MIMO",
     "Typst",
-    "zihao",
-    "zhang"
+    "zhang",
+    "zihao"
   ]
 }

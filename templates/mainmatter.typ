@@ -23,21 +23,33 @@
     ],
   )
 
-  // #show raw: it => [
-  //   #set text(font: ("Consolas", "Microsoft YaHei"), size: 11pt)
-  //   #set line()
-  //   #if it.block [
-  //     #set text(size: 10pt)
-  //     #align(center)[
-  //       #box(
-  //         stroke: (paint: black, thickness: 1pt, dash: "solid"),
-  //         inset: 8pt,
-  //       )[#it]
-  //     ]
-  //   ] else [
-  //     #it
-  //   ]
-  // ]
+  #show figure.where(kind: table): set figure(
+    supplement: "表",
+    numbering: (..args) => {
+      let heading-counter = counter(heading).get()
+      let image-counter = counter(figure.where(kind: table)).get().at(0)
+      let chapter = if heading-counter.len() > 0 { heading-counter.at(0) } else { 0 }
+      numbering("1-1", chapter, image-counter)
+    },
+  )
+  #show figure.where(kind: image): set figure(
+    supplement: "图",
+    numbering: (..args) => {
+      let heading-counter = counter(heading).get()
+      let image-counter = counter(figure.where(kind: image)).get().at(0)
+      let chapter = if heading-counter.len() > 0 { heading-counter.at(0) } else { 0 }
+      numbering("1-1", chapter, image-counter)
+    },
+  )
+  #show figure.where(kind: raw): set figure(
+    supplement: "代码",
+    numbering: (..args) => {
+      let heading-counter = counter(heading).get()
+      let codeblock-counter = counter(figure.where(kind: raw)).get().at(0)
+      let chapter = if heading-counter.len() > 0 { heading-counter.at(0) } else { 0 }
+      numbering("1-1", chapter, codeblock-counter)
+    },
+  )
 
   #show heading.where(level: 1): set heading(numbering: "第 1 章")
   #show heading.where(level: 2): set heading(numbering: "1.1")
@@ -51,8 +63,8 @@
     ]
     #v(1em)
     #counter(math.equation).update(0)
+    #counter(figure).update(0)
   ]
-
   #show heading.where(level: 2): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
       #set par(leading: 10pt, justify: true, first-line-indent: 0em)
@@ -60,7 +72,6 @@
     ]
     #v(1em)
   ]
-
   #show heading.where(level: 3): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
       #set par(leading: 10pt, justify: true, first-line-indent: 0em)

@@ -1,9 +1,22 @@
-#import "../../../components/formula.typ": numbered-formula, unnumbered-formula
+#import "../../../components/formula.typ": formula
 #import "../../../components/codeblock.typ": code
+#import "../../../components/table.typ": ntable
 
 = 内容格式说明
 
 在这一章，我们介绍内容元素的格式说明。
+
+== 论文语言风格
+
+除外国语言文学相关专业研究生及留学生（不含汉语国际教育硕士）外，学位论文一律须用汉语书写。学位论文应当用规范汉字进行撰写，除古汉语研究中涉及的古文字和参考文献中引用的外文文献之外，均采用简体汉字撰写。
+
+留学生一般应以中文或英文书写学位论文，格式要求同上。论文须用中文封面。 学位论文是学术作品，因此其表述要严谨简明，重点突出，专业常识应简写或不写，做到层次分明、数据可靠、文字凝练、说明透彻、推理严谨、立论正确，避免使用文学性质的或带感情色彩的非学术性语言。
+
+论文中如出现一个非通用性的新名词、新术语或新概念，需随即解释清楚。
+
+== 论文题目
+
+论文题目应简明扼要地反映论文工作的主要内容，切忌笼统。由于读者要通过论文题目中的关键词来检索论文，所以用语准确非常重要。论文题目应该是对研究对象的准确具体的描述，这种描述要在一定程度上体现研究结论。因此，论文题目不仅应告诉读者这本论文研究了什么问题，更要告诉读者这个研究得出的结论。例如：“在事实与虚构之间：梅乐、卡彭特、沃尔夫的新闻观”就比“三个美国作家的新闻观研究”更专业更准确。
 
 == 研究背景和意义
 
@@ -35,9 +48,33 @@
 
 == 图、表、公式、算法等的说明
 
+=== 插图的说明
+
+图要求清晰，最好为矢量图，图中文字最好用中文。
+
+图要精选，具有自明性，切忌与表及文字表述重复。图要清楚，但坐标比例不要过分放大，同一图上不同曲线的点要分别用不同形状的标识符标出。地图插图涉及中国地图全图时，须使用自然资源部标准地图底图制作。
+
+图序与图名置于图的下方，用宋体5号字，居中，段前空6磅，段后空12磅，单倍行距；图序与图名文字之间空一个字符。如“图2-1 发展中国家经济增长速度的比较（1960-2000）”，其中“图2.1”是图序。根据学科专业习惯可在中文图序和图名下方添加对应的英文图序和名，采用Times New Roman体，居中，段前空0磅，段后空12磅，单倍行距。
+
+图中的术语、符号、单位等应与正文表述中所用一致，图中文字用5号或小5 号（9～10.5 磅）字，以能够清晰阅读为标准。专用名字代号、单位可采用外文表示，坐标轴题名、词组、描述性的词语均须采用中文。
+
+如果一个图由两个或两个以上分图组成时，各分图分别以(a)、(b)、(c)……作为图序，并须有分图名。
+
+#figure(
+  image("./figure-2-1.svg", width: 70%),
+  caption: [这是一张示例插图],
+)
+
 === 列表的说明
 
 === 表的说明
+
+#ntable("示例信息表")[
+  | *姓名* | *Location* | *Height* | *Score* |
+  | ------ | ---------- | -------- | ------- |
+  | John | Second St. | 180 cm | 5 |
+  | Wally | Third Av. | 160 cm | 10 |
+]
 
 === 代码的说明
 
@@ -47,7 +84,7 @@
 
 首先是二叉树节点结构定义，我们在 C 语言中定义结构体 `TreeNode`：
 
-#code(numbers: true,caption: "代码 1-1 TreeNode 定义")[```c
+#code(linenumbers: true, caption: "TreeNode 定义")[```c
   #include <stdio.h>
   #include <stdlib.h>
   // 定义二叉树节点结构
@@ -60,23 +97,23 @@
 
 然后实现代码中比较核心的部分：创建结点的辅助函数，以及中序遍历的递归实现。
 
-```c
-// 中序遍历函数（递归）
-void inorderTraversal(TreeNode* root) {
-    if (root == NULL) return;
-    inorderTraversal(root->left);         // 访问左子树
-    printf("%d ", root->val);             // 访问当前节点
-    inorderTraversal(root->right);        // 访问右子树
-}
-// 创建新节点的辅助函数
-TreeNode* createNode(int val) {
-    TreeNode* node = (TreeNode*)malloc(sizeof(TreeNode));
-    node->val = val;
-    node->left = NULL;
-    node->right = NULL;
-    return node;
-}
-```
+#code(linenumbers: true, caption: "中序遍历与创建节点函数")[```c
+  // 中序遍历函数（递归）
+  void inorderTraversal(TreeNode* root) {
+      if (root == NULL) return;
+      inorderTraversal(root->left);         // 访问左子树
+      printf("%d ", root->val);             // 访问当前节点
+      inorderTraversal(root->right);        // 访问右子树
+  }
+  // 创建新节点的辅助函数
+  TreeNode* createNode(int val) {
+      TreeNode* node = (TreeNode*)malloc(sizeof(TreeNode));
+      node->val = val;
+      node->left = NULL;
+      node->right = NULL;
+      return node;
+  }
+  ```]
 
 === 公式的说明
 
@@ -88,7 +125,7 @@ TreeNode* createNode(int val) {
 
 比如，现在我想求出一元二次方程 $a x^2 + b x + c = 0, (a ≠ 0)$ 的求根公式，有以下演算过程：
 
-#unnumbered-formula($
+#formula($
   a x^2 + b x = -c ⇒ \
   x^2 + frac(b, a)x = -frac(c, a) ⇒ \
   x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
@@ -101,9 +138,12 @@ $)
 
 最终，我们就得到了如下对一元二次方程的求根公式：
 
-#numbered-formula($
-  x = frac(-b plus.minus sqrt(b^2 - 4 a c), 2a)
-$)
+#formula(
+  number: true,
+  $
+    x = frac(-b plus.minus sqrt(b^2 - 4 a c), 2a)
+  $,
+)
 
 === 定理、推论、命题的说明
 

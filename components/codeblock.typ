@@ -1,32 +1,22 @@
 #let code(
-  caption: none, // content of caption bubble (string, none)
-  bgcolor: rgb("#fefae0"), // back ground color (color)
-  strokecolor: 1pt + maroon, // frame color (color)
-  hlcolor: auto, // color to use for highlighted lines (auto, color)
-  width: 100%,
-  radius: 3pt,
-  inset: 5pt,
-  numbers: false, // show line numbers (boolean)
-  stepnumber: 1, // only number lines divisible by stepnumber (integer)
-  numberfirstline: false, // if the firstline isn't divisible by stepnumber, force it to be numbered anyway (boolean)
-  numberstyle: auto, // style function to apply to line numbers (auto, style)
-  firstnumber: 1, // number of the first line (integer)
-  highlight: none, // line numbers to highlight (none, array of integer)
-  content,
-) = {
-  show raw: set text(font: ("Consolas", "Microsoft YaHei"), size: 11pt)
-  if type(hlcolor) == "auto" {
-    hlcolor = bgcolor.darken(10%)
-  }
-  if type(highlight) == "none" {
-    highlight = ()
-  }
-  block(
-    breakable: false,
-    width: width,
-    inset: 0pt, // 外层 block 不需要额外间距
-    [
-      #block(
+    caption: none, // content of caption bubble (string, none)
+    bgcolor: rgb("#fefae0"), // back ground color (color)
+    strokecolor: 1pt + maroon, // frame color (color)
+    hlcolor: auto, // color to use for highlighted lines (auto, color)
+    width: 100%,
+    radius: 3pt,
+    inset: 5pt,
+    linenumbers: false, // show line numbers (boolean)
+    stepnumber: 1, // only number lines divisible by stepnumber (integer)
+    numberfirstline: false, // if the firstline isn't divisible by stepnumber, force it to be numbered anyway (boolean)
+    numberstyle: auto, // style function to apply to line numbers (auto, style)
+    firstnumber: 1, // number of the first line (integer)
+    highlight: none, // line numbers to highlight (none, array of integer)
+    content, // 代码内容
+  ) = {
+    // 包装为 figure 以支持编号
+    figure(
+      block(
         breakable: false,
         width: width,
         fill: bgcolor,
@@ -35,8 +25,15 @@
         inset: inset,
         clip: false,
         {
+          show raw: set text(font: ("Consolas", "Microsoft YaHei"), size: 11pt)
+          if type(hlcolor) == "auto" {
+            hlcolor = bgcolor.darken(10%)
+          }
+          if type(highlight) == "none" {
+            highlight = ()
+          }
           let (columns, align, make_row) = {
-            if numbers {
+            if linenumbers {
               // line numbering requested
               if type(numberstyle) == "auto" {
                 numberstyle = text.with(
@@ -84,13 +81,8 @@
               .map(c => if c.has("text") and c.text == "" { v(1em) } else { c })
           )
         },
-      )
-      #if caption != none [
-        #align(center)[
-          #text(size: 0.9em)[#caption]
-        ]
-        #v(0.5em)
-      ]
-    ],
-  )
-}
+      ),
+      caption: caption, 
+      kind: raw, 
+    )
+  }
