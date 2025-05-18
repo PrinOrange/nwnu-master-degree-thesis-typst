@@ -17,7 +17,7 @@
   <img src="./assets/preview.png" style="max-width: 300px;border: 2px solid black;" />
 </p>
 
-## 快速开始
+## 安装配置
 
 本工程构建脚本需要 GNU Make 工具。如果你在 Windows 平台上，请先在安装并配置 GNU Make 工具。
 
@@ -34,7 +34,9 @@ make ping # 预期输出： "Pong"
 首先确保你在本机[安装了 Typst 软件并配置环境](https://github.com/typst/typst?tab=readme-ov-file#installation)
 。推荐使用 Visual Studio Code 作为编辑器。
 
-然后安装本论文必需的字体文件。为方便使用，所需字体已储存在本仓库下的
+然后，请安装 [typstyle](https://github.com/Enter-tainer/typstyle) ，它是用于 Typst 代码的文本格式化工具。
+
+接下来安装本论文必需的字体文件。为方便使用，所需字体已储存在本仓库下的
 `./assets/font` 目录下。本论文涉及的字体列表如下：
 
 - 宋体（中易宋体，SimSun）
@@ -55,18 +57,34 @@ make install-fonts
 make watch
 ```
 
+如果需要格式化文档，请执行
+
+```bash
+make fmt
+```
+
 若编译文档，可以执行
 
 ```bash
 make compile
 ```
 
-## 免责声明
+## 项目结构
 
-本 Typst 模板
-**非官方模板**，虽已可能按论文格式标准完整复现模板。但仍可能存在部分误差。**用户对使用本模板自负。**
+本论文的内容均在 `contents` 目录下的各个 `*.typ` 文件中，可根据文件内的注释提示编写代码。
+
++ `cover.typ`: 封面内容。
++ `abstracts/*.typ`: 中文和英文摘要内容。
++ `statements/*.typ`: 论文的声明部分。
++ `mainmatter/chapter-*/`: 每个章节都放在 `content.typ` 中，插图也可以放在该目录下。
++ `appendixes/appendix-*/`: 每个附录都放在 `content.typ` 中，插图也可以放在该目录下。
++ `conclusion.typ`: 结论内容。
++ `references/ref.bib`: 参考文献内容，这部分内容使用 BibTeX 编写。
++ `acknowledgement.typ`: 致谢内容。
 
 ## 协议
+本 Typst 模板
+**非官方模板**，虽已可能按论文格式标准完整复现模板。但仍可能存在部分误差。**用户对使用本模板自负。**
 
 除部分涉及学校单位相关的资源（如西北师范大学文字 LOGO、字体等），本项目其余部分以 MIT 协议开源。
 
