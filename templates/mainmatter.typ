@@ -89,17 +89,15 @@
   ]
   #show heading.where(level: 2): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
-      #set par(leading: 10pt, justify: true, first-line-indent: 0em)
       #it
     ]
-    #v(1em)
+    #v(0.5em)
   ]
   #show heading.where(level: 3): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(4), weight: "regular")[
-      #set par(leading: 10pt, justify: true, first-line-indent: 0em)
       #it
     ]
-    #v(1em)
+    #v(0.5em)
   ]
 
   #set par(leading: 10pt, justify: true, first-line-indent: (
