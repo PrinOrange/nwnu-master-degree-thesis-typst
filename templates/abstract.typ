@@ -4,7 +4,7 @@
 #let abstract-template(content) = [
   // Page settings.
   #set page(
-    margin: (top: 3cm, bottom: 3cm, x: 3.05cm),
+    margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
     header: [
       #align(center)[
         #box(stroke: (bottom: 0.5pt), width: 100%)[
@@ -39,6 +39,6 @@
   ))
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
 
-  #v(1em);
+  #v(0.5em);
   #content
 ]

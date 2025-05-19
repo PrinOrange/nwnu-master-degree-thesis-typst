@@ -1,4 +1,6 @@
-#let cover-content = (
+#import "/templates/cover.typ": cover-template;
+
+#show: content => cover-template((
   // 论文标题名称
   title: "面向6G物联网系统的多源优化调度与信息及时性研究",
   // 论文标题名称（英文）
@@ -45,4 +47,4 @@
   profession-major-english: "Software Engineering",
   // 专项计划，若无，可不填
   special-program: "",
-)
+))[#content]

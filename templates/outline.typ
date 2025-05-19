@@ -1,65 +1,61 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title
 
-#set page(
-  margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
-  header: [
-    #align(center)[
-      #box(stroke: (bottom: 0.5pt), width: 100%)[
-        #text(font: ("Times New Roman", "SimSun"), baseline: -5pt)[
-          #spaced-title("目录")
+#let outline-template(content) = [
+
+  #set page(
+    margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
+    header: [
+      #align(center)[
+        #box(stroke: (bottom: 0.5pt), width: 100%)[
+          #text(font: ("Times New Roman", "SimSun"), baseline: -5pt)[
+            #spaced-title("目录")
+          ]
         ]
       ]
-    ]
-  ],
-  footer: context [
-    #box(width: 100%)[
-      #align(center)[
-        #counter(page).display("I")
+    ],
+    footer: context [
+      #box(width: 100%)[
+        #align(center)[
+          #counter(page).display("I")
+        ]
       ]
+    ],
+  )
+
+  #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
+  #set par(leading: 1em)
+
+  #show outline.entry.where(level: 4): none
+  #show outline.entry.where(level: 5): none
+  #show outline.entry.where(level: 6): none
+  #show outline.entry.where(level: 7): none
+
+  #show outline.entry.where(level: 1): it => {
+    block[
+      #text(font: ("Times New Roman", "SimHei"), size: zh(-4))[#it]
     ]
-  ],
-)
+  }
 
-#set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
-#set par(leading: 1em)
-
-#show outline.entry.where(level: 4): none
-#show outline.entry.where(level: 5): none
-#show outline.entry.where(level: 6): none
-#show outline.entry.where(level: 7): none
-
-#show outline.entry.where(level: 1): it => {
-  block[
-    #text(font: ("Times New Roman", "SimHei"), size: zh(-4))[#it]
-  ]
-}
-
-#show outline.entry.where(level: 2): it => {
-  block[
-    #text(
-      font: ("Times New Roman", "SimSun"),
-      size: zh(5),
-      weight: "regular",
-    )[#it]
-  ]
-}
-
-#show outline.entry.where(level: 3): it => {
-  block[
-    #text(
-      font: ("Times New Roman", "SimSun"),
-      size: zh(5),
-      weight: "regular",
-    )[#it]
-  ]
-}
-
-#outline(indent: 1em, title: align(center)[
-  #box(width: 100%)[
-    #text(font: "SimHei", weight: "bold")[
-      #spaced-title("目录")
+  #show outline.entry.where(level: 2): it => {
+    block[
+      #text(
+        font: ("Times New Roman", "SimSun"),
+        size: zh(5),
+        weight: "regular",
+      )[#it]
     ]
-  ]
-  #v(1em)
-])
+  }
+
+  #show outline.entry.where(level: 3): it => {
+    block[
+      #text(
+        font: ("Times New Roman", "SimSun"),
+        size: zh(5),
+        weight: "regular",
+      )[#it]
+    ]
+  }
+
+  #content
+]
