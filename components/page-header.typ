@@ -1,5 +1,3 @@
-
-
 #let alternative-pageheader() = {
   context {
     // 获取当前页面位置
