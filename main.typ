@@ -1,6 +1,5 @@
 #import "@preview/cuti:0.3.0": show-cn-fakebold
 #show: show-cn-fakebold
-#set page(numbering: none)
 
 #include "contents/cover.typ"
 #include "contents/statements/originality.typ";
@@ -29,4 +28,4 @@
 #include "contents/appendixes/appendix-a/content.typ"
 #include "contents/appendixes/appendix-b/content.typ"
 
-#include "contents/introduction/biology.typ"
+#include "contents/paratext/introduction/biology.typ";

@@ -21,7 +21,7 @@ By reading the paper abstract, readers should be able to have a holistic underst
 
 #v(1em)
 #box()[
-  #h(1em)#text(font: "Times New Roman", weight: "bold")[Keywords:]
+  #text(font: "Times New Roman", weight: "bold")[Keywords:]
   #text(font: "Times New Roman")[
     // 在这下面写上你要添加的英文关键词
     #format-keywords("keyword 1", "keyword 2", "keyword 3", "keyword 4")

@@ -1,10 +1,12 @@
 #import "/templates/cover.typ": cover-template;
 
-#show: content => cover-template((
+// 在下面，根据指示，填写你的论文封面信息。
+
+#show: _ => cover-template((
   // 论文标题名称
-  title: "面向6G物联网系统的多源优化调度与信息及时性研究",
+  title: "面向5G物联网系统的多源优化调度与信息及时性研究",
   // 论文标题名称（英文）
-  title-english: "Multi-source Optimal Scheduling and Information Timeliness for 6G Internet of Things System",
+  title-english: "Multi-source Optimal Scheduling and Information Timeliness for 5G Internet of Things System",
   // 发表年份，通常是毕业年份
   year: "2027",
   // 发表月份，通常是答辩日期月份
@@ -47,4 +49,4 @@
   profession-major-english: "Software Engineering",
   // 专项计划，若无，可不填
   special-program: "",
-))[#content]
+))

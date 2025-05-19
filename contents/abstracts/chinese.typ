@@ -22,7 +22,7 @@
 #v(1em)
 #text(size: zh(-4))[
   #box()[
-    #h(2em)#text(font: "SimHei")[关键词：]
+    #text(font: "SimHei")[关键词：]
     #text(font: ("Times New Roman", "SimSun"))[
       // 在这下面写上你要添加的中文关键词
       #format-keywords("关键词 1", "关键词 2", "关键词 3")

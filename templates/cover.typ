@@ -28,7 +28,6 @@
     profession-major-english,
     special-program,
   ),
-  content,
 ) = [
   #set page(
     margin: (
