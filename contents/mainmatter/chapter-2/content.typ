@@ -3,6 +3,9 @@
 #import "/components/table.typ": ntable, tltable
 #import "/components/reasoning.typ": *
 
+#import "/templates/mainmatter.typ": mainmatter-template
+#show: mainmatter-template
+
 = 内容格式说明
 
 在这一章，我们介绍内容元素的格式说明。

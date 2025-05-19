@@ -1,4 +1,5 @@
-#import "@preview/pointless-size:0.1.1": zh, zihao
+#import "/templates/appendix.typ": appendix-template
+#show: appendix-template;
 
 = 何为附录
 

@@ -1,4 +1,7 @@
 #import "/components/reasoning.typ": *
+#import "/templates/mainmatter.typ": mainmatter-template
+
+#show: mainmatter-template
 
 = 布局与结构格式说明
 

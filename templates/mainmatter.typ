@@ -40,9 +40,9 @@
   #show figure.where(kind: table): set figure(supplement: "表", numbering: (
     ..args,
   ) => {
-    let heading-counter = counter(heading).get()
+    let elem-counter = counter(heading).get()
     let image-counter = counter(figure.where(kind: table)).get().at(0)
-    let chapter = if heading-counter.len() > 0 { heading-counter.at(0) } else {
+    let chapter = if elem-counter.len() > 0 { elem-counter.at(0) } else {
       0
     }
     numbering("1-1", chapter, image-counter)
@@ -51,11 +51,11 @@
     ..args,
   ) => {
     let heading-counter = counter(heading).get()
-    let image-counter = counter(figure.where(kind: image)).get().at(0)
+    let elem-counter = counter(figure.where(kind: image)).get().at(0)
     let chapter = if heading-counter.len() > 0 { heading-counter.at(0) } else {
       0
     }
-    numbering("1-1", chapter, image-counter)
+    numbering("1-1", chapter, elem-counter)
   })
   #show figure.where(kind: raw): set figure(supplement: "代码", numbering: (
     ..args,

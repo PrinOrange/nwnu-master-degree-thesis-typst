@@ -1,5 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
-#import "@preview/pointless-size:0.1.1": zh, zihao
+#import "/templates/paratext.typ": paratext-template
+#show: paratext-template;
 
 #let intro-list(content, title: str) = [
   #par(first-line-indent: (all: true, amount: 1em))[

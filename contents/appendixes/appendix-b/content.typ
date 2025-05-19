@@ -1,5 +1,5 @@
-#import "@preview/pointless-size:0.1.1": zh, zihao
-
+#import "/templates/appendix.typ": appendix-template
+#show: appendix-template;
 
 = 甘肃省2000-2020人口变化统计数据
 

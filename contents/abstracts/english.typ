@@ -1,4 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
+#import "/templates/abstract.typ": abstract-template;
+#show: abstract-template;
 
 #let format-keywords(..keywords) = {
   let formatted = keywords.pos().join("; ")

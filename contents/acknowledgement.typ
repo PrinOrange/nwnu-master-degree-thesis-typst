@@ -1,3 +1,6 @@
+#import "/templates/paratext.typ": paratext-template
+#show: paratext-template;
+
 = 致谢
 
 在本硕士学位论文即将完成之际，我满怀感激之情，谨向在我研究与写作过程中给予关心、帮助和支持的各位师长、同仁及亲友致以最诚挚的谢意。

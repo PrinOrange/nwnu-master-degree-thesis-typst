@@ -1,48 +1,31 @@
 #import "@preview/cuti:0.3.0": show-cn-fakebold
 #show: show-cn-fakebold
-
 #set page(numbering: none)
+
 #import "templates/cover.typ": cover-template
-#import "templates/statement.typ": statement-template
-#import "templates/abstract.typ": abstract-template
-#import "templates/mainmatter.typ": mainmatter-template
-#import "templates/paratext.typ": paratext-template
-#import "templates/references.typ": references-template
-#import "templates/appendix.typ": appendix-template
-#import "/states/header-state.typ": header-alternative-status, header-status;
 #import "contents/cover.typ": cover-content
 #cover-template(cover-content);
 
-#show heading.where(level: 1): it => {
-  header-status.update(it)
-  header-alternative-status.update(1)
-  it
-}
-
-#statement-template(include "contents/statements/originality.typ");
-#statement-template(include "contents/statements/copyright.typ");
+#include "contents/statements/originality.typ";
+#include "contents/statements/copyright.typ";
 
 #counter(page).update(1)
-#abstract-template(include "contents/abstracts/chinese.typ")
-#abstract-template(include "contents/abstracts/english.typ")
+#include "contents/abstracts/chinese.typ"
+#include "contents/abstracts/english.typ"
 
 #include "templates/outline.typ"
 #counter(page).update(1)
 #counter(heading).update(0);
-#mainmatter-template(include "contents/mainmatter/chapter-1/content.typ");
-#mainmatter-template(include "contents/mainmatter/chapter-2/content.typ");
-#mainmatter-template(include "contents/mainmatter/chapter-3/content.typ");
+#include "contents/mainmatter/chapter-1/content.typ";
+#include "contents/mainmatter/chapter-2/content.typ";
+#include "contents/mainmatter/chapter-3/content.typ";
 
-#paratext-template(include "contents/conclusion.typ")
+#include "contents/conclusion.typ"
 
-#references-template(bibliography(
-  "./contents/references/ref.bib",
-  title: "参考文献",
-  full: true,
-));
-#paratext-template(include "contents/acknowledgement.typ")
+#include "contents/references/references.typ"
+#include "contents/acknowledgement.typ"
 
 #counter(heading).update(0);
-#appendix-template(include "contents/appendixes/appendix-a/content.typ")
-#appendix-template(include "contents/appendixes/appendix-b/content.typ")
-#paratext-template(include "contents/introduction/biology.typ")
+#include "contents/appendixes/appendix-a/content.typ"
+#include "contents/appendixes/appendix-b/content.typ"
+#include "contents/introduction/biology.typ"

@@ -1,4 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
+#import "/templates/statement.typ": statement-template
+#show: statement-template;
 
 = 西北师范大学学位论文原创性声明
 
