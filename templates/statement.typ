@@ -13,7 +13,7 @@
 
   #set heading(outlined: false)
   #show heading.where(level: 1): it => [
-    #text(font: "SimHei", size: zh(-2))[
+    #text(font: "SimHei", size: zh(-2), weight: "regular")[
       #align(center)[
         #set heading(outlined: false)
         #it

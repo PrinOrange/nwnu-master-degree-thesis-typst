@@ -2,7 +2,6 @@
 #import "/lib/text.typ": spaced-title;
 #import "/components/reasoning.typ": *
 #import "@preview/cuti:0.3.0": show-cn-fakebold
-#import "/states/header-state.typ": header-alternative-status, header-status;
 #import "@preview/hydra:0.6.1": hydra
 #show: show-cn-fakebold
 

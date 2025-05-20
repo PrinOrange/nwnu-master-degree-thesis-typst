@@ -140,17 +140,19 @@
 
 比如，现在我想求出一元二次方程 $a x^2 + b x + c = 0, (a ≠ 0)$ 的求根公式，有以下演算过程：
 
-#formula($
-  a x^2 + b x + c = 0 ⇒ \
-  a x^2 + b x = -c ⇒ \
-  x^2 + frac(b, a)x = -frac(c, a) ⇒ \
-  x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
-  (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
-  (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
-  x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
-  x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-  x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-$)
+#formula(
+  $
+    a x^2 + b x + c = 0 ⇒ \
+    a x^2 + b x = -c ⇒ \
+    x^2 + frac(b, a)x = -frac(c, a) ⇒ \
+    x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
+    (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
+    (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
+    x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
+    x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+    x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+  $,
+)
 
 最终，我们就得到了如下对一元二次方程的求根公式：
 
