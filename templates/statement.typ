@@ -1,14 +1,10 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
+#import "/presettings/paper-presetting.typ": use-paper-presettings;
+
 
 #let statement-template(content) = [
-  #set page(
-    margin: (
-      y: 3cm,
-      x: 3cm,
-    ),
-    binding: auto,
-    numbering: none,
-  )
+  #show: use-paper-presettings
+  #set page(binding: auto, numbering: none)
   #v(10em)
 
   #set heading(outlined: false)

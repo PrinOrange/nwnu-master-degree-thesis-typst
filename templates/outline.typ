@@ -1,27 +1,21 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title
 #import "@preview/hydra:0.6.1": hydra
+#import "/presettings/paper-presetting.typ": use-paper-presettings;
+#import "/presettings/foot-pagenumbers.typ": use-roman-pagenumber;
 
 #let outline-template(content) = [
-  #set page(
-    margin: (top: 4cm, bottom: 3cm, x: 3.05cm),
-    header: context [
-      #align(center)[
-        #box(stroke: (bottom: 0.5pt), width: 100%)[
-          #text(font: ("Times New Roman", "SimSun"), baseline: -5pt)[
-            #spaced-title("目录")
-          ]
+  #show: use-paper-presettings
+  #show: use-roman-pagenumber
+  #set page(header: context [
+    #align(center)[
+      #box(stroke: (bottom: 0.5pt), width: 100%)[
+        #text(font: ("Times New Roman", "SimSun"), baseline: -5pt)[
+          #spaced-title("目录")
         ]
       ]
-    ],
-    footer: context [
-      #box(width: 100%)[
-        #align(center)[
-          #counter(page).display("I")
-        ]
-      ]
-    ],
-  )
+    ]
+  ])
 
   #set heading(outlined: false)
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
