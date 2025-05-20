@@ -2,12 +2,6 @@
 #import "/components/reasoning.typ": reset-reasoning-counter
 
 #let use-appendix-heading-presettings(content) = [
-  #show heading.where(level: 1): it => [
-    #counter(math.equation).update(0)
-    #counter(figure).update(0)
-    #reset-reasoning-counter()
-    #it
-  ]
 
   #show heading.where(level: 1): set heading(numbering: "附录 A")
   #show heading.where(level: 2): set heading(numbering: "1.1")

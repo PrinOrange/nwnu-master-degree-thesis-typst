@@ -1,8 +1,8 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/lib/text.typ": spaced-title;
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
-#import "/presettings/components-numbering.typ": (
-  use-components-numbering-presettings,
+#import "/presettings/appendix-components-numbering.typ": (
+  use-appendix-components-numbering
 );
 #import "/presettings/appendix-headings.typ": use-appendix-heading-presettings;
 #import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
@@ -22,7 +22,7 @@
     #counter(footnote).update(0)
   ])
 
-  #show: use-components-numbering-presettings
+  #show: use-appendix-components-numbering
   #show: use-appendix-heading-presettings
 
   #set par(leading: 10pt, justify: true, first-line-indent: (

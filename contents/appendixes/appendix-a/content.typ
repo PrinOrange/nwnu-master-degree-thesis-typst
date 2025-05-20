@@ -1,6 +1,8 @@
 #import "/templates/appendix.typ": appendix-template
 #show: appendix-template;
 #import "/components/codeblock.typ": code
+#import "/components/formula.typ": formula
+#import "/components/reasoning.typ":definition
 
 = 何为附录
 
@@ -30,3 +32,33 @@
   }
   ```]
 
+#formula(
+  $
+    a x^2 + b x + c = 0 ⇒ \
+    a x^2 + b x = -c ⇒ \
+    x^2 + frac(b, a)x = -frac(c, a) ⇒ \
+    x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
+    (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
+    (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
+    x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
+    x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+    x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+  $,
+  number: true,
+)
+
+#figure(image("../../mainmatter/chapter-2/figure-2-1.svg", width: 70%), caption: [这是一张示例插图])
+
+#definition()[对于 $x∈R$ 且 $x≥0$，若存在 $y∈R$ 满足：
+  $
+    y^2 = x, y ≥0
+  $
+  则称 $y$ 为 $x$ 的平方根，记作：
+  $
+    y=sqrt(x)
+  $
+  即：
+  $
+    sqrt(x) = sup{r ∈ QQ | r^2 ≤ x}
+  $
+]

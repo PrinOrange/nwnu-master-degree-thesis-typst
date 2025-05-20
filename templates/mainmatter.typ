@@ -5,8 +5,8 @@
 #import "@preview/hydra:0.6.1": hydra
 #show: show-cn-fakebold
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
-#import "/presettings/components-numbering.typ": (
-  use-components-numbering-presettings,
+#import "/presettings/mainmatter-components-numbering.typ": (
+  use-mainmatter-components-numbering,
 );
 #import "/presettings/mainmatter-headings.typ": (
   use-mainmatter-heading-presettings,
@@ -28,7 +28,7 @@
     counter(footnote).update(0)
   })
 
-  #show: use-components-numbering-presettings
+  #show: use-mainmatter-components-numbering
   #show: use-mainmatter-heading-presettings
 
   #set par(leading: 10pt, justify: true, first-line-indent: (
