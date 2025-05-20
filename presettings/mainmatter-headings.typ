@@ -3,14 +3,14 @@
 
 #let use-mainmatter-heading-presettings(content) = [
 
-  #show heading.where(level: 1): set heading(numbering: "第 1 章")
+  #show heading.where(level: 1): set heading(numbering: "1")
   #show heading.where(level: 2): set heading(numbering: "1.1")
   #show heading.where(level: 3): set heading(numbering: "1.1.1")
 
   #show heading.where(level: 1): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(-2), weight: "regular")[
       #align(center)[
-        #it
+        第 #context(counter(heading).display(it.numbering)) 章 #it.body
         #v(1em)
       ]
     ]

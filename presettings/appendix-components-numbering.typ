@@ -1,5 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/components/reasoning.typ": reset-reasoning-counter
+#import "../components/formula.typ": formula
 
 #let use-appendix-components-numbering(content) = [
 
