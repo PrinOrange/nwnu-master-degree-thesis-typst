@@ -25,7 +25,7 @@
       inset: inset,
       clip: false,
       {
-        show raw: set text(font: ("Consolas", "Microsoft YaHei"), size: 9pt)
+        show raw: set text(font: ("Consolas", "SimSun"), size: 9pt)
         if type(hlcolor) == "auto" {
           hlcolor = bgcolor.darken(10%)
         }

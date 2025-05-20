@@ -4,9 +4,11 @@
 
 #show: _ => cover-template((
   // 论文标题名称
-  title: "面向5G物联网系统的多源优化调度与信息及时性研究",
+  title: "如何撰写硕士研究生学位论文",
+  // 论文副标题，若没有，可写为 none
+  subtitle: "以本 Typst 模板为例",
   // 论文标题名称（英文）
-  title-english: "Multi-source Optimal Scheduling and Information Timeliness for 5G Internet of Things System",
+  title-english: "How to to write a master's thesis with this template",
   // 发表年份，通常是毕业年份
   year: "2027",
   // 发表月份，通常是答辩日期月份

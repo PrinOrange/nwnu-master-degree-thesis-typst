@@ -5,6 +5,7 @@
 #let cover-template(
   (
     title,
+    subtitle,
     title-english,
     year,
     month,
@@ -115,15 +116,26 @@
 
   #v(1cm)
 
+  #align(center)[
+    #par(leading: 1.25em)[
+      #text(font: ("Times New Roman", "KaiTi_GB2312"), size: zh(1))[
+        #align(center)[
+          #title
+        ]
+      ]
+    ]
 
-  #text(font: ("Times New Roman", "KaiTi_GB2312"), size: zh(1))[
-    #align(center)[
-      #title
+    #par(leading: 1.25em)[
+      #text(font: ("Times New Roman", "KaiTi_GB2312"), size: zh(2))[
+        #align(center)[
+          #subtitle
+        ]
+      ]
     ]
   ]
 
 
-  #v(1.0cm)
+  #v(2em)
 
   #text(font: ("Times New Roman", "simsun"), size: zh(4))[
     #align(center)[
@@ -214,7 +226,7 @@
     ]
   ]
 
-  #v(2cm)
+  #v(1cm)
 
   #text(font: "SimHei", size: zh(3))[
     #align(center)[
