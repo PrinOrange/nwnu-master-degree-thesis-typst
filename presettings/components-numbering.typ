@@ -1,13 +1,14 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/components/reasoning.typ": reset-reasoning-counter
 #import "/lib/chapter.typ": get-current-chapter-num
-#import "/states/numbering-style.typ": component-chapter-numbering-state;
+#import "/states/numbering-style.typ": chapter-numbering-state;
 
 // 附录的组件编号规则
 #let appendix-components-numbering(content) = [
-  #component-chapter-numbering-state.update("A")
+  #chapter-numbering-state.update("A")
 
   #counter(math.equation).update(0)
+  #counter(figure.where(kind: "algorithm")).update(0)
   #counter(figure.where(kind: image)).update(0)
   #counter(figure.where(kind: table)).update(0)
   #counter(figure.where(kind: raw)).update(0)
@@ -65,9 +66,10 @@
 
 // 正文的组件编号规则
 #let mainmatter-components-numbering(content) = [
-  #component-chapter-numbering-state.update("1")
+  #chapter-numbering-state.update("1")
 
   #counter(math.equation).update(0)
+  #counter(figure.where(kind: "algorithm")).update(0)
   #counter(figure.where(kind: image)).update(0)
   #counter(figure.where(kind: table)).update(0)
   #counter(figure.where(kind: raw)).update(0)
