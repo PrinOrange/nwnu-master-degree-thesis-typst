@@ -3,4 +3,9 @@
 
 // 请编辑本目录下的 ./ref.bib 文件来添加参考文献。
 
-#bibliography("./ref.bib", title: "参考文献", full: true)
+#bibliography(
+  "./ref.bib",
+  title: "参考文献",
+  full: true,
+  style: "gb-7714-2015-numeric",
+)
