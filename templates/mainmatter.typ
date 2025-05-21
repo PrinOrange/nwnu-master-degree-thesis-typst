@@ -5,13 +5,11 @@
 #import "@preview/hydra:0.6.1": hydra
 #show: show-cn-fakebold
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
-#import "/presettings/mainmatter-components-numbering.typ": (
-  use-mainmatter-components-numbering,
+#import "/presettings/components-numbering.typ": (
+  mainmatter-components-numbering,
 );
-#import "/presettings/mainmatter-headings.typ": (
-  use-mainmatter-heading-numbering,
-);
-#import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
+#import "/presettings/heading-numbering.typ": use-mainmatter-heading-numbering;
+#import "/presettings/page-numbering.typ": use-arabic-pagenumber;
 #import "/presettings/common-style.typ": numbered-heading-style;
 
 #let mainmatter-template(content) = [
@@ -29,7 +27,7 @@
     counter(footnote).update(0)
   })
 
-  #show: use-mainmatter-components-numbering
+  #show: mainmatter-components-numbering
   #show: use-mainmatter-heading-numbering
   #show: numbered-heading-style
 

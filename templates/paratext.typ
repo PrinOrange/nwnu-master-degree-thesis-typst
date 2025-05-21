@@ -1,7 +1,7 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title;
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
-#import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
+#import "/presettings/page-numbering.typ": use-arabic-pagenumber;
 #import "/presettings/common-style.typ": unnumbered-heading-style;
 
 #let paratext-template(content) = [

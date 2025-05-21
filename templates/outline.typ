@@ -2,7 +2,7 @@
 #import "../lib/text.typ": spaced-title
 #import "@preview/hydra:0.6.1": hydra
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
-#import "/presettings/foot-pagenumbers.typ": use-roman-pagenumber;
+#import "/presettings/page-numbering.typ": use-roman-pagenumber;
 #import "/presettings/common-style.typ": unnumbered-heading-style;
 
 #let outline-template(content) = [

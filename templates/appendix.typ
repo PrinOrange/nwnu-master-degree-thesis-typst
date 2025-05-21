@@ -1,11 +1,9 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/lib/text.typ": spaced-title;
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
-#import "/presettings/appendix-components-numbering.typ": (
-  use-appendix-components-numbering,
-);
-#import "/presettings/appendix-headings.typ": use-appendix-heading-numbering;
-#import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
+#import "/presettings/components-numbering.typ": appendix-components-numbering;
+#import "/presettings/heading-numbering.typ": use-appendix-heading-numbering;
+#import "/presettings/page-numbering.typ": use-arabic-pagenumber;
 #import "/presettings/common-style.typ": numbered-heading-style;
 
 #let appendix-template(content) = [
@@ -24,7 +22,7 @@
     #counter(footnote).update(0)
   ])
 
-  #show: use-appendix-components-numbering
+  #show: appendix-components-numbering
   #show: use-appendix-heading-numbering
   #show: numbered-heading-style
 

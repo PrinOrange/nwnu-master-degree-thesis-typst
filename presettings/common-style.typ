@@ -1,6 +1,7 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "../lib/text.typ": spaced-title
 
+// 使用带编号的标题样式
 #let numbered-heading-style(content) = [
   #show heading.where(level: 1): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(-2), weight: "regular")[
@@ -25,6 +26,7 @@
   #content
 ]
 
+// 使用不带编号的标题样式
 #let unnumbered-heading-style(content) = [
   #show heading.where(level: 1): it => [
     #text(font: ("Arial", "SimHei"), size: zh(-2), weight: "regular")[
