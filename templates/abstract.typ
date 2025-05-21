@@ -3,6 +3,7 @@
 #import "@preview/hydra:0.6.1": hydra
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
 #import "/presettings/foot-pagenumbers.typ": use-roman-pagenumber;
+#import "/presettings/common-style.typ": unnumbered-heading-style;
 
 #let abstract-template(content) = [
   #show: use-paper-presettings
@@ -19,15 +20,8 @@
   ])
 
   #set heading(outlined: false)
-  #show heading.where(level: 1): it => [
-    #text(font: ("Arial", "SimHei"), size: zh(-2), weight: "regular")[
-      #align(center)[
-        #spaced-title(it)
-      ]
-    ]
-    #v(0.5em);
-  ]
 
+  #show: unnumbered-heading-style;
   #set par(leading: 10pt, justify: true, first-line-indent: (
     amount: 2em,
     all: true,

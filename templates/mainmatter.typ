@@ -9,9 +9,10 @@
   use-mainmatter-components-numbering,
 );
 #import "/presettings/mainmatter-headings.typ": (
-  use-mainmatter-heading-presettings,
+  use-mainmatter-heading-numbering,
 );
 #import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
+#import "/presettings/common-style.typ": numbered-heading-style;
 
 #let mainmatter-template(content) = [
   #show: use-paper-presettings
@@ -29,7 +30,8 @@
   })
 
   #show: use-mainmatter-components-numbering
-  #show: use-mainmatter-heading-presettings
+  #show: use-mainmatter-heading-numbering
+  #show: numbered-heading-style
 
   #set par(leading: 10pt, justify: true, first-line-indent: (
     amount: 2em,

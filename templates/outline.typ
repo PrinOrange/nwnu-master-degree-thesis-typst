@@ -3,6 +3,7 @@
 #import "@preview/hydra:0.6.1": hydra
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
 #import "/presettings/foot-pagenumbers.typ": use-roman-pagenumber;
+#import "/presettings/common-style.typ": unnumbered-heading-style;
 
 #let outline-template(content) = [
   #show: use-paper-presettings
@@ -21,14 +22,7 @@
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
   #set par(leading: 1em)
 
-  #show heading.where(level: 1): it => [
-    #text(font: ("Arial", "SimHei"), size: zh(-2), weight: "regular")[
-      #align(center)[
-        #spaced-title(it)
-      ]
-    ]
-    #v(0.5em);
-  ]
+  #show: unnumbered-heading-style
 
   #show outline.entry.where(level: 4): none
   #show outline.entry.where(level: 5): none

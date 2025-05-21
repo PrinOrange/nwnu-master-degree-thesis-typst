@@ -2,6 +2,7 @@
 #import "../lib/text.typ": spaced-title;
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
 #import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
+#import "/presettings/common-style.typ": unnumbered-heading-style;
 
 #let paratext-template(content) = [
   #show: use-paper-presettings
@@ -17,14 +18,7 @@
     ]
   ])
 
-  #show heading.where(level: 1): it => [
-    #text(font: ("arial", "SimHei"), size: zh(-2), weight: "regular")[
-      #align(center)[
-        #spaced-title(it.body)
-      ]
-    ]
-    #v(0.5em);
-  ]
+  #show: unnumbered-heading-style
 
   #set par(leading: 10pt, justify: true, first-line-indent: (
     amount: 2em,

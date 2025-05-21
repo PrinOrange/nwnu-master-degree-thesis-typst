@@ -4,8 +4,9 @@
 #import "/presettings/appendix-components-numbering.typ": (
   use-appendix-components-numbering,
 );
-#import "/presettings/appendix-headings.typ": use-appendix-heading-presettings;
+#import "/presettings/appendix-headings.typ": use-appendix-heading-numbering;
 #import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
+#import "/presettings/common-style.typ": numbered-heading-style;
 
 #let appendix-template(content) = [
 
@@ -24,7 +25,8 @@
   ])
 
   #show: use-appendix-components-numbering
-  #show: use-appendix-heading-presettings
+  #show: use-appendix-heading-numbering
+  #show: numbered-heading-style
 
   #set par(leading: 10pt, justify: true, first-line-indent: (
     amount: 2em,
