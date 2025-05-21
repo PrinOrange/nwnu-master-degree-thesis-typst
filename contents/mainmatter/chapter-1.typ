@@ -105,7 +105,7 @@ UDC 参照《国际十进分类法（Classification Decimal Universal）》尽�
 - 楷体 GB2312
 - 仿宋 GB2312
 
-如果需要外语编写，所使用的字体可能会另有规定，欢迎提交 Issue 或 Pull Request #footnote("项目地址：https://github.com/PrinOrange/nwnu-master-thesis-typst") 反馈补充。
+如果需要外语编写，所使用的字体可能会另有规定，欢迎提交 Issue 或 Pull Request #footnote("项目地址：https://github.com/PrinOrange/nwnu-thesis-typst") 反馈补充。
 
 == 摘要
 
