@@ -8,6 +8,7 @@
 #import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
 
 #let appendix-template(content) = [
+
   #show: use-paper-presettings
   #show: use-arabic-pagenumber
   // Page settings.

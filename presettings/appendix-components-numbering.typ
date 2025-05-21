@@ -1,8 +1,11 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/components/reasoning.typ": reset-reasoning-counter
 #import "/lib/chapter.typ": get-current-chapter-num
+#import "/states/numbering-style.typ": component-chapter-numbering-state;
 
 #let use-appendix-components-numbering(content) = [
+
+  #component-chapter-numbering-state.update("A")
 
   #counter(math.equation).update(0)
   #counter(figure.where(kind: image)).update(0)

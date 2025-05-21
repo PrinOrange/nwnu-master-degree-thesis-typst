@@ -1,7 +1,10 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/components/reasoning.typ": reset-reasoning-counter
+#import "/states/numbering-style.typ": component-chapter-numbering-state;
 
 #let use-mainmatter-components-numbering(content) = [
+
+  #component-chapter-numbering-state.update("1")
 
   #counter(math.equation).update(0)
   #counter(figure.where(kind: image)).update(0)

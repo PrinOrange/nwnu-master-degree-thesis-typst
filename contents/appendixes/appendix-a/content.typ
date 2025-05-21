@@ -2,6 +2,8 @@
 #show: appendix-template;
 #import "/components/codeblock.typ": code
 #import "/components/reasoning.typ": definition
+#import "/components/algorithm.typ": algorithm
+#import "/components/table.typ": tltable
 
 = 何为附录
 
@@ -74,4 +76,27 @@ $
   $
     sqrt(x) = sup{r ∈ QQ | r^2 ≤ x}
   $
+]
+
+#algorithm((
+  title: "冒泡排序(升序数组)",
+  input: [长度为 $n$ 的无序数组 $A = [a_1, a_2, dots, a_n]$],
+  output: [按升序排列的数组 $A$],
+))[
+  1. 初始化 $n = "length"(A)$
+  2. *for* $i = 1$ *to* $n - 1$ *do*
+  3. *for* $j = 1$ *to* $n - i$ *do*
+  4. *if* $A_j > A_(j+1)$ *then*
+  5. 交换 $A_j$ 和 $A_(j+1)$
+  6. *end if*
+  7. *end for*
+  8. *end for*
+]
+
+#tltable("示例三线表")[
+  | Substance | Subcritical °C | Supercritical °C |
+  | --------------------- | -------------- | ---------------- |
+  | Hydrochloric Acid | 12.0 | 92.1 |
+  | Sodium Myreth Sulfate | 16.6 | 104 |
+  | Potassium Hydroxide | 24.7 | < |
 ]
