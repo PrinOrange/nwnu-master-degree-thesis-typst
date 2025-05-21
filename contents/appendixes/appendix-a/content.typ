@@ -2,7 +2,7 @@
 #show: appendix-template;
 #import "/components/codeblock.typ": code
 #import "/components/formula.typ": formula
-#import "/components/reasoning.typ":definition
+#import "/components/reasoning.typ": definition
 
 = 何为附录
 
@@ -62,7 +62,10 @@
   number: true,
 )
 
-#figure(image("../../mainmatter/chapter-2/figure-2-1.svg", width: 70%), caption: [这是一张示例插图])
+#figure(
+  image("../../mainmatter/chapter-2/figure-2-1.svg", width: 70%),
+  caption: [这是一张示例插图],
+)
 
 #definition()[对于 $x∈R$ 且 $x≥0$，若存在 $y∈R$ 满足：
   $

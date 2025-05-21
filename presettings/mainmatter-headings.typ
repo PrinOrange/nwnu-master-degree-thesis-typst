@@ -10,7 +10,7 @@
   #show heading.where(level: 1): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(-2), weight: "regular")[
       #align(center)[
-        第 #context(counter(heading).display(it.numbering)) 章 #it.body
+        第 #context (counter(heading).display(it.numbering)) 章 #it.body
         #v(1em)
       ]
     ]

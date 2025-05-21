@@ -2,7 +2,7 @@
 #import "/lib/text.typ": spaced-title;
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
 #import "/presettings/appendix-components-numbering.typ": (
-  use-appendix-components-numbering
+  use-appendix-components-numbering,
 );
 #import "/presettings/appendix-headings.typ": use-appendix-heading-presettings;
 #import "/presettings/foot-pagenumbers.typ": use-arabic-pagenumber;
