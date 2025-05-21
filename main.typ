@@ -13,6 +13,7 @@
 
 // 更新页码计数器，正文之后的页面，使用阿拉伯数字页码
 #counter(page).update(1)
+#include "contents/preface.typ";
 // 更新大标题计数器，正文之后的一级标题作为每个章节的编号
 #counter(heading).update(0);
 #include "contents/mainmatter/chapter-1.typ";

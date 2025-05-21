@@ -1,4 +1,3 @@
-#import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/templates/paratext.typ": paratext-template
 #show: paratext-template;
 
