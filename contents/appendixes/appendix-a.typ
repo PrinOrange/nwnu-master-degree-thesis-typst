@@ -60,7 +60,7 @@ $
 $
 
 #figure(
-  image("../../mainmatter/chapter-2/figure-2-1.svg", width: 70%),
+  image("/images/illustration-1.svg", width: 70%),
   caption: [这是一张示例插图],
 )
 

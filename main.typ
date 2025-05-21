@@ -15,9 +15,9 @@
 #counter(page).update(1)
 // 更新大标题计数器，正文之后的一级标题作为每个章节的编号
 #counter(heading).update(0);
-#include "contents/mainmatter/chapter-1/content.typ";
-#include "contents/mainmatter/chapter-2/content.typ";
-#include "contents/mainmatter/chapter-3/content.typ";
+#include "contents/mainmatter/chapter-1.typ";
+#include "contents/mainmatter/chapter-2.typ";
+#include "contents/mainmatter/chapter-3.typ";
 
 #include "contents/paratext/conclusion.typ"
 #include "contents/paratext/references/references.typ"
@@ -25,7 +25,7 @@
 
 // 更新大标题计数器，附录之后的一级标题作为每个附录的编号
 #counter(heading).update(0);
-#include "contents/appendixes/appendix-a/content.typ"
-#include "contents/appendixes/appendix-b/content.typ"
+#include "contents/appendixes/appendix-a.typ"
+#include "contents/appendixes/appendix-b.typ"
 
 #include "contents/paratext/introduction/biology.typ";

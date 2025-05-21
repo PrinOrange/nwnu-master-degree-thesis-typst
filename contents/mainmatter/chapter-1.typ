@@ -12,7 +12,7 @@
 中文封面已经在本模板中制作给出，作者只需要在相关配置文件中输入论文题目、姓名、导师等相关信息，即可自动生成中文封面。对于封面信息的填写，有以下部分规定
 
 #figure(
-  image("../../mainmatter/chapter-2/figure-2-1.svg", width: 70%),
+  image("/images/illustration-2.svg", width: 70%),
   caption: [这是一张示例插图],
 )
 

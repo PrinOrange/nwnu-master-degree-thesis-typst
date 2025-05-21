@@ -1,6 +1,6 @@
 #import "/templates/mainmatter.typ": mainmatter-template
 #show: mainmatter-template
-#import "../../../components/algorithm.typ": algorithm
+#import "/components/algorithm.typ": algorithm
 
 = 计算机排序算法（示例章节）
 
