@@ -35,8 +35,10 @@
   #show outline.entry.where(level: 6): none
   #show outline.entry.where(level: 7): none
 
+  #set heading(numbering: "1.")
+
   #show outline.entry.where(level: 1): it => {
-    block[
+    box[
       #text(font: ("Times New Roman", "SimHei"), size: zh(-4))[#it]
     ]
   }

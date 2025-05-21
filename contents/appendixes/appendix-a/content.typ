@@ -1,7 +1,6 @@
 #import "/templates/appendix.typ": appendix-template
 #show: appendix-template;
 #import "/components/codeblock.typ": code
-#import "/components/formula.typ": formula
 #import "/components/reasoning.typ": definition
 
 = 何为附录
@@ -32,35 +31,31 @@
   }
   ```]
 
-#formula(
-  $
-    a x^2 + b x + c = 0 ⇒ \
-    a x^2 + b x = -c ⇒ \
-    x^2 + frac(b, a)x = -frac(c, a) ⇒ \
-    x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
-    (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
-    (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
-    x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
-    x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-    x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-  $,
-  number: true,
-)
 
-#formula(
-  $
-    a x^2 + b x + c = 0 ⇒ \
-    a x^2 + b x = -c ⇒ \
-    x^2 + frac(b, a)x = -frac(c, a) ⇒ \
-    x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
-    (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
-    (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
-    x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
-    x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-    x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
-  $,
-  number: true,
-)
+$
+  a x^2 + b x + c = 0 ⇒ \
+  a x^2 + b x = -c ⇒ \
+  x^2 + frac(b, a)x = -frac(c, a) ⇒ \
+  x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
+  (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
+  (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
+  x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
+  x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+  x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+$
+
+
+$
+  a x^2 + b x + c = 0 ⇒ \
+  a x^2 + b x = -c ⇒ \
+  x^2 + frac(b, a)x = -frac(c, a) ⇒ \
+  x^2 + frac(b, a)x + (frac(b, 2a))^2 = -frac(c, a) + (frac(b, 2a))^2 ⇒ \
+  (x + frac(b, 2a))^2 = -frac(c, a) + frac(b^2, 4a^2) ⇒ \
+  (x + frac(b, 2a))^2 = frac(b^2 - 4a c, 4a^2) ⇒ \
+  x + frac(b, 2a) = plus.minus sqrt(frac(b^2 - 4a c, 4a^2)) ⇒ \
+  x + frac(b, 2a) = plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+  x = -frac(b, 2a) plus.minus frac(sqrt(b^2 - 4a c), 2a) ⇒ \
+$
 
 #figure(
   image("../../mainmatter/chapter-2/figure-2-1.svg", width: 70%),

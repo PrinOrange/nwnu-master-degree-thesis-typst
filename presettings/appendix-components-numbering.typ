@@ -1,6 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/components/reasoning.typ": reset-reasoning-counter
-#import "../components/formula.typ": formula
+#import "/lib/chapter.typ": get-current-chapter-num
 
 #let use-appendix-components-numbering(content) = [
 
@@ -9,6 +9,15 @@
   #counter(figure.where(kind: table)).update(0)
   #counter(figure.where(kind: raw)).update(0)
   #reset-reasoning-counter()
+
+  #set math.equation(number-align: bottom, numbering: (..args) => [
+    #let heading-counter = counter(heading).get()
+    #let equation-counter = counter(math.equation)
+    #let chapter = if heading-counter.len() > 0 { heading-counter.at(0) } else {
+      0
+    }
+    #[(#numbering("A", chapter)-#equation-counter.display("1"))]
+  ])
 
   #show enum: set enum(indent: 2em)
   #show list: set list(indent: 2em)
