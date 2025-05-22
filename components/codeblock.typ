@@ -6,7 +6,7 @@
   width: 100%,
   radius: 3pt,
   inset: 5pt,
-  linenumbers: false, // show line numbers (boolean)
+  linenumbers: true, // show line numbers (boolean)
   stepnumber: 1, // only number lines divisible by stepnumber (integer)
   numberfirstline: false, // if the firstline isn't divisible by stepnumber, force it to be numbered anyway (boolean)
   numberstyle: auto, // style function to apply to line numbers (auto, style)
