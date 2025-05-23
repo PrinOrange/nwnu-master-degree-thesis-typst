@@ -21,7 +21,6 @@
 
   #set heading(outlined: false)
 
-
   #show: unnumbered-chapter-heading
   #show: paragraph-style
 
@@ -57,6 +56,7 @@
       )[#it]
     ]
   }
-
+  
+  #v(0.5em);
   #content
 ]

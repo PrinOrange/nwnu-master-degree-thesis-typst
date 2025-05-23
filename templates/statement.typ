@@ -22,7 +22,7 @@
     amount: 2em,
     all: true,
   ))
-  #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
+  #set text(font: ("Times New Roman", "SimSun"), size: zh(4))
 
   #content
 ]
