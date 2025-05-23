@@ -1,7 +1,6 @@
 #import "@preview/pointless-size:0.1.1": zh, zihao
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
 
-
 #let statement-template(content) = [
   #show: use-paper-presettings
   #set page(binding: auto, numbering: none)

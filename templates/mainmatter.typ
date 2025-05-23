@@ -12,6 +12,7 @@
 #import "/presettings/page-numbering.typ": use-arabic-pagenumber;
 #import "/presettings/common-style.typ": numbered-section-heading;
 #import "/presettings/common-style.typ": paragraph-style;
+#import "/presettings/common-style.typ": quote-style;
 
 #let mainmatter-template(content) = [
   #show: use-paper-presettings
@@ -31,7 +32,9 @@
   #show: mainmatter-components-numbering
   #show: use-mainmatter-heading-numbering
   #show: numbered-section-heading
+  #show: quote-style
   #show: paragraph-style
+
 
   #v(1em);
   #content

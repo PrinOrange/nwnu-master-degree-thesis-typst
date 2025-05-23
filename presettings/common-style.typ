@@ -59,3 +59,14 @@
   #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
   #content
 ]
+
+#let quote-style(content) = [
+  #show quote: set text(font: ("Times New Roman", "KaiTi_GB2312"), size: zh(-4))
+  #show quote: set quote(quotes: false, block: true)
+  #show quote: set par(leading: 10pt, justify: true, first-line-indent: (
+    amount: 2em,
+    all: true,
+  ))
+
+  #content
+]
