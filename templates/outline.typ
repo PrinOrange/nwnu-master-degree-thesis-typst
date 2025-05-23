@@ -3,7 +3,8 @@
 #import "@preview/hydra:0.6.1": hydra
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
 #import "/presettings/page-numbering.typ": use-roman-pagenumber;
-#import "/presettings/common-style.typ": unnumbered-heading-style;
+#import "/presettings/common-style.typ": unnumbered-chapter-heading;
+#import "/presettings/common-style.typ": paragraph-style;
 
 #let outline-template(content) = [
   #show: use-paper-presettings
@@ -19,17 +20,17 @@
   ])
 
   #set heading(outlined: false)
-  #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
-  #set par(leading: 1em)
 
-  #show: unnumbered-heading-style
+
+  #show: unnumbered-chapter-heading
+  #show: paragraph-style
+
+  #show block: set block(inset: 0em, outset: 0em)
 
   #show outline.entry.where(level: 4): none
   #show outline.entry.where(level: 5): none
   #show outline.entry.where(level: 6): none
   #show outline.entry.where(level: 7): none
-
-  #set heading(numbering: "1.")
 
   #show outline.entry.where(level: 1): it => {
     box[

@@ -2,7 +2,8 @@
 #import "../lib/text.typ": spaced-title;
 #import "/presettings/paper-presetting.typ": use-paper-presettings;
 #import "/presettings/page-numbering.typ": use-arabic-pagenumber;
-#import "/presettings/common-style.typ": unnumbered-heading-style;
+#import "/presettings/common-style.typ": unnumbered-chapter-heading;
+#import "/presettings/common-style.typ": paragraph-style;
 
 #let paratext-template(content) = [
   #show: use-paper-presettings
@@ -18,13 +19,8 @@
     ]
   ])
 
-  #show: unnumbered-heading-style
-
-  #set par(leading: 10pt, justify: true, first-line-indent: (
-    amount: 2em,
-    all: true,
-  ))
-  #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
+  #show: unnumbered-chapter-heading
+  #show: paragraph-style
 
   #v(0.5em);
   #content

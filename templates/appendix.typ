@@ -4,7 +4,8 @@
 #import "/presettings/components-numbering.typ": appendix-components-numbering;
 #import "/presettings/heading-numbering.typ": use-appendix-heading-numbering;
 #import "/presettings/page-numbering.typ": use-arabic-pagenumber;
-#import "/presettings/common-style.typ": numbered-heading-style;
+#import "/presettings/common-style.typ": numbered-section-heading;
+#import "/presettings/common-style.typ": paragraph-style;
 
 #let appendix-template(content) = [
 
@@ -24,13 +25,8 @@
 
   #show: appendix-components-numbering
   #show: use-appendix-heading-numbering
-  #show: numbered-heading-style
-
-  #set par(leading: 10pt, justify: true, first-line-indent: (
-    amount: 2em,
-    all: true,
-  ))
-  #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
+  #show: numbered-section-heading
+  #show: paragraph-style
 
   #v(1em);
   #content

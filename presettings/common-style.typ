@@ -2,7 +2,7 @@
 #import "../lib/text.typ": spaced-title
 
 // 使用带编号的标题样式
-#let numbered-heading-style(content) = [
+#let numbered-section-heading(content) = [
   #show heading.where(level: 1): it => [
     #text(font: ("Times New Roman", "SimHei"), size: zh(-2), weight: "regular")[
       #align(center)[
@@ -27,7 +27,7 @@
 ]
 
 // 使用不带编号的标题样式
-#let unnumbered-heading-style(content) = [
+#let unnumbered-chapter-heading(content) = [
   #show heading.where(level: 1): it => [
     #text(font: ("Arial", "SimHei"), size: zh(-2), weight: "regular")[
       #align(center)[
@@ -48,5 +48,14 @@
     ]
     #v(0.5em)
   ]
+  #content
+]
+
+#let paragraph-style(content) = [
+  #set par(leading: 10pt, justify: true, first-line-indent: (
+    amount: 2em,
+    all: true,
+  ));
+  #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
   #content
 ]
